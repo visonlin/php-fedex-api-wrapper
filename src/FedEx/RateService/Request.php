@@ -36,7 +36,7 @@ class Request extends AbstractRequest
         if (null != $wsdlPath) {
             $this->_wsdlPath = $wsdlPath;
         } else {
-            $this->_wsdlPath = realpath(dirname(__FILE__) . '../../../../../../../app/models/Functions/_wsdl/RateService_v10.wsdl');
+            $this->_wsdlPath = app_path('models/Functions/_wsdl/RateService_v10.wsdl');
         }
 
         $this->_soapClient = new \SoapClient($this->_wsdlPath, array('trace' => true));
